@@ -1,0 +1,37 @@
+{
+  "name": "local-edge-tts-server",
+  "version": "1.0.0",
+  "main": "build/server.js",
+  "bin": "build/server.js",
+  "repository": "git@github.com:Tihi321/local-edge-tts-server.git",
+  "author": "Tihomir Selak <tknox.dr@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/ws": "^8.5.10",
+    "pkg": "^5.8.1",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "build": "rimraf build && tsc",
+    "start": "node build/server.js",
+    "start:custom": "node build/server.js --port",
+    "dev": "tsc -w",
+    "client": "ts-node src/example-client.ts",
+    "package": "yarn build && pkg . --out-path=dist"
+  },
+  "pkg": {
+    "targets": [
+      "node18-win-x64",
+      "node18-linux-x64",
+      "node18-macos-x64"
+    ],
+    "outputPath": "dist"
+  }
+}
