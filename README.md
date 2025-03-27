@@ -30,14 +30,14 @@ yarn client
 
 ## Building Executable
 
-You can create standalone executables using:
+You can create a standalone executable for Windows using:
 
 ```bash
-# Build executables for Windows, macOS, and Linux
+# Build executable for Windows (Node.js 20.18.0)
 yarn package
 ```
 
-This will create executables in the `dist` directory for multiple platforms.
+This will create an executable in the `dist` directory optimized for Windows.
 
 ## Command-line Options
 
@@ -54,14 +54,14 @@ Example:
 yarn start --port 9000
 
 # When running the executable
-./local-edge-tts-server --port 9000
+local-edge-tts-server.exe --port 9000
 ```
 
 ## Project Structure
 
 - `/src` - TypeScript source files
 - `/build` - Compiled JavaScript output
-- `/dist` - Executable binaries (after packaging)
+- `/dist` - Windows executable (after packaging)
 
 ## Message Types
 
